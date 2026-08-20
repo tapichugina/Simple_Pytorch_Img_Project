@@ -1,0 +1,36 @@
+[project]
+name = "Simple_Pytoch_Img_project"
+version = "0.1.0"
+description = "test simple image generation"
+authors = [
+    {name = "tapichugina",email = "ttatyana.pichugina@gmail.com"}
+]
+
+
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+dependencies = [
+    "torch (>=2.12.0,<3.0.0)",
+    "torchvision (>=0.27.0,<0.28.0)",
+    "torchaudio (>=2.11.0,<3.0.0)",
+    "shap (>=0.52.0,<0.53.0)",
+    "matplotlib (>=3.10.9,<4.0.0)",
+    "numpy (>=2.4.6,<3.0.0)",
+    "ipykernel (>=7.2.0,<8.0.0)",
+    "jupyter (>=1.1.1,<2.0.0)",
+    "torchmetrics (>=1.9.0,<2.0.0)",
+    "torchinfo (>=1.8.0,<2.0.0)",
+    "scikit-learn (>=1.9.0,<2.0.0)",
+    "mlflow (>=3.13.0,<4.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)",
+    "tensorboard (>=2.21.0,<3.0.0)"
+]
+
+[tool.poetry]
+package-mode = false
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
