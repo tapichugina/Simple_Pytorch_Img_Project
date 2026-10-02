@@ -117,8 +117,8 @@ class StepByStep(object):
             mini_batch_loss,pred_class =self._val_step(x_batch, y_batch)
             mini_batch_losses.append(mini_batch_loss)
     
-            all_preds.extend(pred_class.numpy())
-            all_targets.extend(y_batch.numpy())
+            all_preds.extend(pred_class.cpu().numpy())
+            all_targets.extend(y_batch.cpu().numpy())
         report=self._classification_report(all_targets,all_preds)
             
         loss = np.mean(mini_batch_losses)

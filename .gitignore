@@ -3,6 +3,13 @@
 venv/
 env/
 runs/
+dataset/test/
+dataset/train/
+shape_dataset/
+pretrained/
+data/
+Report.txt
+
 
 # VS Code
 .vscode/
@@ -23,3 +30,4 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+Report_generated_shapes.txt

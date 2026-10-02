@@ -5820,6 +5820,29 @@ optree = ["optree (>=0.13.0)"]
 pyyaml = ["pyyaml"]
 
 [[package]]
+name = "torch-lr-finder"
+version = "0.2.2"
+description = "Pytorch implementation of the learning rate range test"
+optional = false
+python-versions = ">=3.5.9"
+groups = ["main"]
+files = [
+    {file = "torch_lr_finder-0.2.2-py3-none-any.whl", hash = "sha256:926f451a213a6f593902c6ed2a1fa1603fb2fbdd8fb2a427d2eac8f46086ad3b"},
+    {file = "torch_lr_finder-0.2.2.tar.gz", hash = "sha256:d659725028e1ab860deeabe01f445e07f758285c524c8720bd9cc3f39343c778"},
+]
+
+[package.dependencies]
+matplotlib = "*"
+numpy = "*"
+packaging = "*"
+torch = ">=0.4.1"
+tqdm = "*"
+
+[package.extras]
+dev = ["black", "flake8", "ipywidgets", "pep8-naming", "pytest", "pytest-cov", "pytest-mock", "torchvision"]
+tests = ["pytest", "pytest-cov", "pytest-mock"]
+
+[[package]]
 name = "torchaudio"
 version = "2.11.0"
 description = "An audio package for PyTorch"
@@ -6368,4 +6391,4 @@ type = ["pytest-mypy (>=1.0.1) ; platform_python_implementation != \"PyPy\""]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12,<3.13"
-content-hash = "22c1374af26659108256e31757b7f534d3589f725ffd0cb46c4e1c080d571602"
+content-hash = "7d81379cd49809db42ff5759475b0ab02007b2b52db37db06798672325d33053"

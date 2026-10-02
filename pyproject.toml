@@ -24,7 +24,8 @@ dependencies = [
     "scikit-learn (>=1.9.0,<2.0.0)",
     "mlflow (>=3.13.0,<4.0.0)",
     "seaborn (>=0.13.2,<0.14.0)",
-    "tensorboard (>=2.21.0,<3.0.0)"
+    "tensorboard (>=2.21.0,<3.0.0)",
+    "torch-lr-finder (>=0.2.2,<0.3.0)"
 ]
 
 [tool.poetry]
