@@ -57,6 +57,7 @@ class StepByStep(object):
         # This method allows the user to define a SummaryWriter to interface with TensorBoard
         current_time = datetime.now().strftime("%b%d_%H-%M-%S")
         self.writer = SummaryWriter(f"{folder}/{current_time}_{name}")
+        
 
 
     def _train_step(self,x,y):
@@ -190,6 +191,13 @@ class StepByStep(object):
 
 
         if self.writer:
+            self.writer.add_text("Model/architecture",str(self.model),global_step=0)
+            self.writer.add_text(
+                "Training/config",f"""
+                Optimizer: {self.optimizer.__class__.__name__}
+                Learning rate: {self.optimizer.param_groups[0]['lr']}
+                Weight decay: {self.optimizer.param_groups[0]['weight_decay']}""",
+                global_step=0)
             # Closes the writer
             self.writer.close()
 
